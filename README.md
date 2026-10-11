@@ -1,6 +1,6 @@
 # Bass Model Homework: Diffusion of Apple AirPods Pro 3
 
-Marketing Analytics, Karen Hovhannisyan. Look-alike innovation: Google Translate. Scope: global.
+Marketing Analytics, Robert Shakhnazarian. Look-alike innovation: Google Translate. Scope: global.
 
 ## Structure
 ```
