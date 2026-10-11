@@ -2,25 +2,23 @@
 
 Marketing Analytics, Robert Shakhnazarian. Look-alike innovation: Google Translate. Scope: global.
 
+The analysis estimates Bass diffusion parameters (p, q) from Google Trends data for Google Translate, sizes the market potential (M) for AirPods Pro 3 with a Fermi estimate, and forecasts adopters per period from the launch date (19 Sep 2025).
+
 ## Structure
 ```
-bass_airpods_pro3.ipynb   main notebook (report + code)
+bass_airpods_pro3.ipynb   main notebook (report text, code and outputs)
 helper_functions.py       Google Trends loader, Bass model, NLS/OLS fitting, bootstrap, adopters tables
-requirements.txt
-data/                     input CSV (you add) and CSVs written by the notebook, see data/README.md
-img/                      figures written by the notebook
-report/                   report.pdf (you generate, see below) and references.md
+requirements.txt          Python dependencies
+data/                     input data and tables written by the notebook (see data/README.md)
+img/                      figures produced by the notebook
+report/                   final report (report.pdf, report.html) and references.md
 ```
 
-## Run
+## How to reproduce
 1. `pip install -r requirements.txt`
-2. Download the Google Trends CSV (link in `data/README.md`) and save it as `data/google_translate_trends.csv`.
-3. `jupyter nbconvert --to notebook --execute --inplace bass_airpods_pro3.ipynb`
+2. Open `bass_airpods_pro3.ipynb` in Jupyter from the repository folder and run all cells. The input file `data/google_translate_trends.csv` is included.
 
-## Build the PDF
-Pick one:
-- `jupyter nbconvert --to pdf bass_airpods_pro3.ipynb --output-dir report --output report` (needs a LaTeX install)
-- Open the executed notebook in Jupyter and use *File > Save and Export Notebook As > PDF*
-- `jupyter nbconvert --to html bass_airpods_pro3.ipynb`, open the HTML in a browser, and print to PDF (keeps the equations)
+To rebuild the HTML report: `jupyter nbconvert --to html bass_airpods_pro3.ipynb --output-dir report --output report`. The PDF was produced by printing that HTML to PDF.
 
-Save the result as `report/report.pdf`. The notebook itself is the report source (instead of a separate `report_source.md`).
+## Data
+Google Trends, worldwide interest in "Google Translate", 2004 to present (monthly): https://trends.google.com/trends/explore?date=all&q=Google%20Translate. Statista only provided cross-sectional data for this product, so Google Trends is used as a proxy for adoption activity. All sources are listed in `report/references.md`.
